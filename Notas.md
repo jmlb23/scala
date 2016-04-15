@@ -37,4 +37,27 @@ temos que ter en conta que se non especificamos o generic devolve un any tanto n
 as colecions basicas que temos son Set Map e List que herdan de Iterable
 set colecion sen orde, map key => value, List Lista clasica
 cada unha destas colecions que estan en scala.collection.Inmutable._ podemos usar sobre elas o map reduce foreach etc
-e dicir funcions de high order
+e dicir funcions de high order ollo que as colecions inmutables non permiten modifiacar o contido, as operacions devolven unha nova colecion sen os elementos,
+ie:
+	List(2,3,5).drop(1) devolve unha nova colecion sen o elemento indicado
+os Maps Key value indicanse asi, Key -> Value que o final non son mais que syntactic sugar de unha colecion de tuplas é un iterable que conten tuplas
+os pares ou tuplas 2 aceptan a notacion de map ollo que coas tuple2 podemos facer dictionaries como en python é xenerica e pdoemos crear tuplas de tuplas,
+esto é -> sirve para crear tuplas (ele1, ele2) equivalente a (ele1 -> ele2) equivalente a Tuple2(ele1, ele2)
+en scala todo operador é un metodo pero dependendo do nome pode pasar que
+	se ten como nome un caluqer caracter incluso un operador tipo `+` obj operador param
+	se ten un nome acabado en `:` enton aplicase   `param operador: obj equivalente a obj.operador:(param)`
+	ie:
+		2 :: Nil
+	ie2:
+		class Probas(val v: String){
+     			def ::(cadea: String): String = v + cadea
+     		}
+		new Probas("hola")
+		res0: Probas = Probas@244038d0
+
+		scala> "probas"  :: res0
+		res1: String = holaprobas
+
+	non é o tradicional non é que o Integer 2 teña un metodo cons se non que o dos é o parametro do metodo :: que é pasado a Nil
+	que os operadores sexan metodos non quere dicir que non teña precedencia ou orde, etc
+	un exemplo dos operadores right hand seria os unarios nos linguaxes tradicionais
