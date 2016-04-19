@@ -66,4 +66,16 @@ en scala todo operador é un metodo pero dependendo do nome pode pasar que
 	un exemplo dos operadores right hand seria os unarios nos linguaxes tradicionais
 ollo cos parametros das clases se non son val ou var so poden ser usados para
 inicilizar fields
-
+a hora de definir unha clase en scala o unico obirgatorio é class Nome
+o corpo da clase e totalmente opcional
+ollo que é moi interesante como se chama o constructor do pai na definicion
+scala como java a primeira sentenza dun constructor ten que ser o this pero, a 
+diferencia de java non é opcional a chamada o this para outro constructor
+ademais que non podemos chamar a super porque xa se chama na declaracion da clase
+temos que ter en conta que os parametros na declaracion da clase, influe se os
+facemos var ou val seran mutaveis ou non, podemos facer setters e getters
+ollo que podemos facer as clases non extensibles mediante sealed ou final
+diferencia final non deixa extender unha clase ou trait
+sealed deixa no mesmo arquivo de codigo
+non temos en scala static, todo o que sexa static ten que ser declarado nun
+companion object que non precisa de ser instanciado
