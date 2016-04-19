@@ -64,3 +64,6 @@ en scala todo operador é un metodo pero dependendo do nome pode pasar que
 	non é o tradicional non é que o Integer 2 teña un metodo cons se non que o dos é o parametro do metodo :: que é pasado a Nil
 	que os operadores sexan metodos non quere dicir que non teña precedencia ou orde, etc
 	un exemplo dos operadores right hand seria os unarios nos linguaxes tradicionais
+ollo cos parametros das clases se non son val ou var so poden ser usados para
+inicilizar fields
+
